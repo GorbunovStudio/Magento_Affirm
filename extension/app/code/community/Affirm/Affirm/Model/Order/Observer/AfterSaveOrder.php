@@ -56,7 +56,8 @@ class Affirm_Affirm_Model_Order_Observer_AfterSaveOrder
         $session->setPreOrderRender(null);
         $session->setLastAffirmSuccess($checkoutToken);
         $session->setAffirmOrderRequest(null);
-        $response->setRedirect(Mage::getUrl('checkout/onepage/success'))->sendResponse();
+        //$response->setRedirect(Mage::getUrl('checkout/onepage/success'))->sendResponse();
+        $response->setRedirect(Mage::getUrl('checkout/onepage/success'));
         return;
     }
 }
